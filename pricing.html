@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pricing – BulkSend v1.1 – Plans & Pricing | JAAN Network</title>
+  <meta name="description" content="Flexible pricing for BulkSend v1.1 — Starter, Professional, and Business plans. Choose monthly, 6-month or yearly billing." />
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader-inner">
+      <img src="assets/images/logo.png" class="loader-logo-img" alt="BulkSend logo" loading="eager" />
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Navbar placeholder (injected from header.html / assets/js/main.js) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8" data-aos="fade-right">
+          <span class="section-badge mb-3 d-inline-block"><i class="fas fa-tag me-1"></i>Pricing</span>
+          <h1>Simple, <span class="text-gradient">Transparent Pricing</span></h1>
+          <p style="color:var(--text-secondary); font-size:1.05rem; max-width:600px; margin-top:12px;">
+            No hidden fees. No long-term contracts. Choose the plan that works best for your business.
+          </p>
+          <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       PRICING PLANS
+       ============================================================ -->
+  <section class="pricing-section" style="padding:80px 0;">
+    <div class="container">
+      <!-- Duration Toggle: Monthly / 6 Months / Yearly -->
+      <div class="text-center mb-4" data-aos="fade-up">
+        <div class="pricing-toggle-wrap" id="pricingDurationWrap">
+          <span class="pricing-toggle-label active" data-duration="monthly">Monthly</span>
+          <span class="pricing-toggle-label" data-duration="6months">6 Months</span>
+          <span class="pricing-toggle-label" data-duration="yearly">Yearly</span>
+        </div>
+        <span class="save-badge" id="saveBadge" style="display:none; margin-top:10px;"></span>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Starter -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="pricing-card h-100">
+            <div class="pricing-plan-name">Starter</div>
+            <div class="pricing-price">
+              <span class="pricing-currency">LKR</span>
+              <span class="pricing-amount" id="price-basic">2,900</span>
+            </div>
+            <span class="pricing-period" id="period-basic">/month</span>
+            <div class="pricing-per-month" id="permonth-basic"></div>
+            <p class="pricing-desc">Ideal for freelancers and small businesses starting their WhatsApp marketing journey.</p>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> 5,000 Messages/Month</li>
+              <li><i class="fas fa-check"></i> Contact List Messaging</li>
+              <li><i class="fas fa-check"></i> Chat Contact Extraction</li>
+              <li><i class="fas fa-check"></i> Basic Dashboard</li>
+              <li><i class="fas fa-check"></i> Text &amp; Image Messages</li>
+              <li><i class="fas fa-check"></i> Message Delay Settings</li>
+              <li class="disabled"><i class="fas fa-times"></i> Group Member Messaging</li>
+              <li class="disabled"><i class="fas fa-times"></i> Group Contact Extraction</li>
+              <li class="disabled"><i class="fas fa-times"></i> API Settings</li>
+              <li class="disabled"><i class="fas fa-times"></i> Priority Support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-custom w-100">
+              <i class="fas fa-shopping-cart me-2"></i>Get Starter
+            </a>
+          </div>
+        </div>
+
+        <!-- Professional -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="pricing-card featured h-100">
+            <div class="popular-badge"><i class="fas fa-fire me-1"></i>Most Popular</div>
+            <div class="pricing-plan-name">Professional</div>
+            <div class="pricing-price">
+              <span class="pricing-currency">LKR</span>
+              <span class="pricing-amount" id="price-pro">5,900</span>
+            </div>
+            <span class="pricing-period" id="period-pro">/month</span>
+            <div class="pricing-per-month" id="permonth-pro"></div>
+            <p class="pricing-desc">The complete package for growing businesses. The most trusted plan — used by 1000+ customers.</p>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Unlimited Messages</li>
+              <li><i class="fas fa-check"></i> Contact List Messaging</li>
+              <li><i class="fas fa-check"></i> All-Contacts Messaging</li>
+              <li><i class="fas fa-check"></i> Group Member Messaging</li>
+              <li><i class="fas fa-check"></i> Chat Contact Extraction</li>
+              <li><i class="fas fa-check"></i> Group Member Extraction</li>
+              <li><i class="fas fa-check"></i> Advanced Dashboard</li>
+              <li><i class="fas fa-check"></i> All Message Types</li>
+              <li><i class="fas fa-check"></i> API Settings</li>
+              <li><i class="fas fa-check"></i> WhatsApp Support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary-custom w-100">
+              <i class="fas fa-rocket me-2"></i>Get Professional
+            </a>
+          </div>
+        </div>
+
+        <!-- Business -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-card h-100">
+            <div class="pricing-plan-name">Business</div>
+            <div class="pricing-price">
+              <span class="pricing-currency">LKR</span>
+              <span class="pricing-amount" id="price-business">9,900</span>
+            </div>
+            <span class="pricing-period" id="period-business">/month</span>
+            <div class="pricing-per-month" id="permonth-business"></div>
+            <p class="pricing-desc">Enterprise-grade features for agencies and large-scale marketing operations.</p>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Everything in Professional</li>
+              <li><i class="fas fa-check"></i> Multi-Account Support (3)</li>
+              <li><i class="fas fa-check"></i> White-label Option</li>
+              <li><i class="fas fa-check"></i> Custom API Integration</li>
+              <li><i class="fas fa-check"></i> Advanced Analytics Reports</li>
+              <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+              <li><i class="fas fa-check"></i> Priority 24/7 Support</li>
+              <li><i class="fas fa-check"></i> Custom Message Templates</li>
+              <li><i class="fas fa-check"></i> Training Session Included</li>
+              <li><i class="fas fa-check"></i> Reseller License Option</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-custom w-100">
+              <i class="fas fa-building me-2"></i>Get Business
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Info -->
+      <div class="text-center mt-5" data-aos="fade-up">
+        <div class="bg-glass d-inline-flex align-items-center gap-3 px-4 py-3">
+          <i class="fas fa-shield-alt" style="color:var(--primary); font-size:1.3rem;"></i>
+          <span style="font-size:0.9rem; color:var(--text-secondary);">Secure Payment via Bank Transfer or Mobile Money &nbsp;|&nbsp; Instant Delivery via WhatsApp &nbsp;|&nbsp; Satisfaction Guaranteed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURE COMPARISON TABLE
+       ============================================================ -->
+  <section style="padding:80px 0; background:var(--bg-section);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge"><i class="fas fa-table me-1"></i>Compare Plans</span>
+        <h2 class="section-title">Full <span>Feature Comparison</span></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="comparison-table" data-aos="fade-up">
+        <div class="table-responsive">
+          <table class="table table-borderless mb-0">
+            <thead>
+              <tr>
+                <th style="width:40%;">Feature</th>
+                <th class="text-center">Starter<br><small style="font-size:0.75rem; font-weight:400; color:var(--text-muted);">LKR 2,900/mo</small></th>
+                <th class="text-center" style="color:var(--primary);">Professional<br><small style="font-size:0.75rem; font-weight:400;">LKR 5,900/mo</small></th>
+                <th class="text-center">Business<br><small style="font-size:0.75rem; font-weight:400; color:var(--text-muted);">LKR 9,900/mo</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Messaging</strong></td><td></td><td></td><td></td></tr>
+              <tr>
+                <td>Messages per Month</td>
+                <td class="text-center">5,000</td>
+                <td class="text-center" style="color:var(--primary); font-weight:700;">Unlimited</td>
+                <td class="text-center">Unlimited</td>
+              </tr>
+              <tr>
+                <td>Contact List Messaging</td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>All-Contacts Broadcasting</td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Group Member Messaging</td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Message Types (Text, Image, Doc, Video)</td>
+                <td class="text-center">Text &amp; Image</td>
+                <td class="text-center" style="color:var(--primary); font-weight:700;">All Types</td>
+                <td class="text-center">All Types</td>
+              </tr>
+              <tr><td><strong>Contact Management</strong></td><td></td><td></td><td></td></tr>
+              <tr>
+                <td>Chat Contact Extraction</td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Group Member Extraction</td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Export to CSV/Excel</td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr><td><strong>Settings &amp; Tools</strong></td><td></td><td></td><td></td></tr>
+              <tr>
+                <td>Smart Delay Settings</td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>API Settings</td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Dashboard Analytics</td>
+                <td class="text-center">Basic</td>
+                <td class="text-center" style="color:var(--primary); font-weight:700;">Advanced</td>
+                <td class="text-center">Full</td>
+              </tr>
+              <tr>
+                <td>Multi-Account Support</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1</td>
+                <td class="text-center" style="color:var(--primary); font-weight:700;">3 Accounts</td>
+              </tr>
+              <tr><td><strong>Support</strong></td><td></td><td></td><td></td></tr>
+              <tr>
+                <td>WhatsApp Support</td>
+                <td class="text-center">Business Hours</td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+                <td class="text-center" style="color:var(--primary); font-weight:700;">Priority 24/7</td>
+              </tr>
+              <tr>
+                <td>Dedicated Account Manager</td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Training Session</td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-times check-no"></i></td>
+                <td class="text-center"><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="text-center py-3"><a href="contact.html" class="btn btn-outline-custom btn-sm">Get Starter</a></td>
+                <td class="text-center py-3"><a href="contact.html" class="btn btn-primary-custom btn-sm">Get Pro</a></td>
+                <td class="text-center py-3"><a href="contact.html" class="btn btn-outline-custom btn-sm">Get Business</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ & PAYMENT
+       ============================================================ -->
+  <section style="padding:80px 0; background:var(--bg-body);">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-badge"><i class="fas fa-credit-card me-1"></i>Payment Info</span>
+          <h2 class="section-title mt-3">How to <span>Purchase</span></h2>
+          <p>Purchasing BulkSend is simple and secure. We accept multiple payment methods.</p>
+
+          <div style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">
+            <div class="why-item">
+              <div class="why-icon"><i class="fas fa-mobile-alt"></i></div>
+              <div class="why-content">
+                <h5>Mobile Money Transfers</h5>
+                <p>Pay via Dialog, Hutch, Mobitel, or Airtel mobile money for instant processing.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><i class="fas fa-university"></i></div>
+              <div class="why-content">
+                <h5>Bank Transfer</h5>
+                <p>Direct bank transfer to JAAN Network's account. We'll confirm within 2 hours.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="why-content">
+                <h5>Contact on WhatsApp</h5>
+                <p>Message us on 076 593 3255 and our team will guide you through the purchase process.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="section-badge"><i class="fas fa-question-circle me-1"></i>Billing FAQ</span>
+          <h2 class="section-title mt-3">Pricing <span>Questions</span></h2>
+
+          <div class="accordion mt-4" id="pricingFaq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pf1">
+                  Can I upgrade my plan later?
+                </button>
+              </h2>
+              <div id="pf1" class="accordion-collapse collapse show" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">Yes! You can upgrade from Starter to Professional or Business at any time. Contact us on WhatsApp and we'll process the upgrade within the same day.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pf2">
+                  Is there a refund policy?
+                </button>
+              </h2>
+              <div id="pf2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">We offer a 7-day satisfaction guarantee. If BulkSend doesn't work as advertised on your device, we'll provide a full refund or resolve the issue immediately.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pf3">
+                  How quickly do I receive the software?
+                </button>
+              </h2>
+              <div id="pf3" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">After payment confirmation, we deliver the software via WhatsApp within 30 minutes during business hours. Night orders are processed first thing in the morning.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pf4">
+                  Are updates included in the subscription?
+                </button>
+              </h2>
+              <div id="pf4" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">Yes! All updates are included at no extra cost for active subscribers. We notify you via WhatsApp when new versions are available.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="padding:60px 0; background:var(--bg-section);">
+    <div class="container">
+      <div class="newsletter-wrapper" data-aos="zoom-in">
+        <h2 style="color:white; font-size:clamp(1.5rem,4vw,2.2rem); font-weight:800; margin-bottom:12px;">
+          Start Your WhatsApp Marketing Today
+        </h2>
+        <p style="color:rgba(255,255,255,0.85); margin-bottom:32px;">
+          Join 1000+ businesses growing with BulkSend. Get started in minutes.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="https://wa.me/94765933255?text=Hi! I want to purchase BulkSend v1.1 Professional Plan" class="btn btn-white btn-lg" target="_blank">
+            <i class="fab fa-whatsapp me-2" style="color:var(--primary);"></i>Buy Now – LKR 5,900/mo
+          </a>
+          <a href="contact.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15); color:white; border:2px solid rgba(255,255,255,0.4); border-radius:50px;">
+            <i class="fas fa-envelope me-2"></i>Contact Sales
+          </a>
+        </div>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.8rem; margin-top:20px;">
+          <i class="fas fa-shield-alt me-1"></i> 7-Day Satisfaction Guarantee &nbsp;|&nbsp;
+          <i class="fab fa-windows me-1"></i> Windows Only &nbsp;|&nbsp;
+          <i class="fas fa-headset me-1"></i> 24/7 WhatsApp Support
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder (injected from footer.html / assets/js/main.js) -->
+  <div id="footer-placeholder"></div>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
