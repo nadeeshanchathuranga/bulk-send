@@ -1,0 +1,184 @@
+================================================================================
+                                   BULKSEND
+            WhatsApp Bulk Messaging & Number Extractor Suite Manual
+================================================================================
+
+Concept & Author:  Thejan Bathiya
+Powered By:        JAAN Network (PVT) Ltd
+Version:           1.2
+Database Model:    SQLite3 Local Database
+Execution Base:    PyQt6 & QtWebEngine (Chromium)
+Document Date:     May 2026
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. Executive Summary & Architecture
+2. Bulk Messaging System (Send Tab)
+3. Contact Extraction Engine (Extractor Tab)
+4. Local Database System (SQLite)
+5. Anti-Spam & Anti-Ban Safeguards
+
+
+================================================================================
+1. EXECUTIVE SUMMARY & ARCHITECTURE
+================================================================================
+BulkSend is a high-performance desktop utility designed to facilitate automated 
+bulk messaging on WhatsApp, while offering extensive contact extraction tools. 
+Built with a dark, professional "native Windows desktop tool" design paradigm, 
+it leverages an embedded, sandboxed Chromium instance to interface directly 
+with WhatsApp Web.
+
+Unlike web-based extensions that are easily blocked, BulkSend runs within a 
+dedicated desktop environment using a persistent user profile and customized 
+HTTP User Agents, making it behave identically to a standard web browser.
+
+1.1 Architectural Specifications:
+---------------------------------
+* Core Framework: Python 3 with PyQt6 (cross-platform desktop toolkit).
+* Browser Engine: PyQt6-WebEngine (based on Chromium) using an isolated cookie 
+  and cache profile located in the `./wa_session` folder.
+* Storage Layer: SQLite3 local database (`bulksend.db`) managed by an automated 
+  `DatabaseManager` class to store settings, logs, and extracted contacts.
+* Script Injection: Custom JavaScript injections that hook into WhatsApp Web's 
+  webpack framework to read collections, query active group metadata, and 
+  intercept module registrations.
+
+1.2 Features Overview:
+----------------------
+* Bulk Messenger: Loads CSV lists, parses column headers as dynamic variables,
+  replaces place-holders, and controls messaging sequences.
+* Contact Extractor: Scrapes chat lists, active groups, and participant lists 
+  using a triple-fallback JS crawler with name-to-phone mapping.
+* Saved Data Hub: Manages historical extraction sources, merges databases, 
+  deduplicates contacts, and exports custom CSV sheets.
+* Anti-Spam Guard: Regulates message volume, randomized delays (jitter), 
+  and triggers batch cooldown periods (anti-ban behavior).
+
+
+================================================================================
+2. BULK MESSAGING SYSTEM (SEND TAB)
+================================================================================
+The Bulk Messaging engine provides a structured environment to compile and 
+execute personalized messaging campaigns. By importing plain text CSV lists, 
+users can deploy mass campaigns with dynamic text fields.
+
+2.1 CSV Contact Loader & Format Parser:
+---------------------------------------
+* Auto-Sanitization: Non-numeric characters (spaces, dashes, parentheses, plus 
+  symbols) are automatically stripped from phone numbers on load.
+* Validation: Empty records and non-numeric numbers are flagged and skipped.
+* CSV Header Mapping: A dynamic variable parser maps extra columns (e.g., name, 
+  invoice_id, date) to braces, allowing templates like:
+  "Hi {name}, your invoice {invoice_id} is ready for download."
+
+2.2 Campaign Lifecycle Manager:
+-------------------------------
+* Thread Isolation: A background worker (CampaignWorker) handles routing 
+  operations in a secondary QThread. This keeps the application UI responsive.
+* Active Navigation: The browser navigates to the custom sending endpoint:
+  https://web.whatsapp.com/send?phone=NUMBER&text=TEXT
+* Settle Interval: The script waits for the conversation block to fully render 
+  inside the DOM before proceeding.
+* Automated Send Trigger: The worker triggers an optimized selector injection 
+  (JS_CLICK_SEND) which searches for the Send button or fallback textbox 
+  element and executes a native `.click()` event.
+* Activity Logging: Progress updates (messages completed, left, active status) 
+  are fed to a dedicated log screen.
+
+
+================================================================================
+3. CONTACT EXTRACTION ENGINE (EXTRACTOR TAB)
+================================================================================
+The Extraction Engine scans the active WhatsApp Web session to harvest contact 
+phone numbers and names. To maintain compatibility with updates to WhatsApp 
+Web, the engine utilizes a robust triple-fallback crawler hierarchy:
+
+3.1 The Triple-Fallback Crawler Hierarchy:
+-------------------------------------------
+1. Path 1: WhatsApp Web Internal Store API Hook
+   Hooks directly into WhatsApp Web's modular core by intercepting the module 
+   registration system (window.__d). It extracts references to active chat 
+   collections, JID mappings, and participant lists using internal methods:
+   - S = window.Store
+   - S.Chat.getActive()
+   - activeChat.groupMetadata.participants
+
+2. Path 2: React Fiber DOM Tree Walk
+   If the Store API is blocked or offline, the engine crawls the virtual DOM 
+   tree of active components. It searches for elements containing the 
+   attributes `[data-testid="participant-list-item"]` or 
+   `[data-testid="cell-frame-container"]` and navigates their React properties 
+   (`__reactFiber...`) to pull contact and profile structures.
+
+3. Path 3: DOM Text Regex Parsing
+   As a final fallback, the crawler scrapes visible text blocks from the 
+   interface and runs a global phone structure regular expression (regex) to 
+   identify and group unsaved phone numbers.
+
+3.2 Contact Resolution and Post-Processing:
+-------------------------------------------
+* LID/JID Identification: Automatically maps legacy phone JIDs (e.g. @c.us) 
+  and modern phone-mapped LIDs (LID numbers) back to the standard international 
+  phone representation.
+* Auto-Saving: The system automatically writes newly discovered contacts into 
+  the SQLite database.
+* Bulk Send Export: Extracted contacts can be sent directly to the Bulk Send 
+  panel with a single click.
+
+
+================================================================================
+4. LOCAL DATABASE SYSTEM (SQLITE)
+================================================================================
+The storage layer (db_manager.py) operates in the background, keeping track 
+of campaign state, historical crawls, and application settings. It consists 
+of two primary tables:
+
+* Table 1: `extracted_contacts`
+  - Stores phone numbers, names, originating source (group/chat title), and 
+    time of extraction.
+  - Compound primary key: (phone, source), which guarantees clean deduplication.
+
+* Table 2: `settings`
+  - Maintains key-value persistence for all anti-spam parameters, keeping 
+    selections intact between restarts.
+
+
+================================================================================
+5. ANTI-SPAM & ANTI-BAN SAFEGUARDS
+================================================================================
+To prevent account restrictions and bans, BulkSend includes multiple 
+configurable anti-spam and anti-ban safeguards:
+
+* Base Delay:
+  - Range: 1 to 300 seconds
+  - Behavior: Sets the standard wait interval between message dispatches.
+
+* Delay Jitter:
+  - Range: 5% to 95% deviation
+  - Behavior: Randomizes the delay interval by a set percentage, mimicking 
+    human typing speeds and variations.
+
+* Batch Pause:
+  - Range: 1 to 1000 messages
+  - Behavior: Halts operations after a configured block of messages is sent to 
+    cool down the account.
+
+* Batch Cooldown:
+  - Range: 1 to 300 minutes
+  - Behavior: Defines a randomized pause window (Min/Max range) for account 
+    cooldown during batch pauses.
+
+* Daily Send Cap:
+  - Range: 1 to 10000 messages
+  - Behavior: Imposes a hard cap on the total number of messages sent in a 
+    24-hour window, automatically stopping the worker.
+
+* HTTP User Agent:
+  - Range: Custom String
+  - Behavior: Spoofs browser identities to matching OS footprints to prevent 
+    fingerprint tracking by WhatsApp.
+
+================================================================================
+                                 END OF MANUAL
+================================================================================

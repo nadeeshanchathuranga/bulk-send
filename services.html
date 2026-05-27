@@ -1,439 +1,761 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Services – BulkSend v1.1 – WhatsApp Marketing Suite | JAAN Network</title>
-  <meta name="description" content="BulkSend v1.1 — Powerful WhatsApp marketing tools: bulk messaging, contact extraction, group messaging and analytics." />
+    <title>
+      Services – BulkSend v1.1 – WhatsApp Marketing Suite | JAAN Network
+    </title>
+    <meta
+      name="description"
+      content="BulkSend v1.1 — Powerful WhatsApp marketing tools: bulk messaging, contact extraction, group messaging and analytics." />
 
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
-
-  <!-- Page Loader -->
-  <div id="page-loader">
-    <div class="loader-inner">
-      <img src="assets/images/logo.png" class="loader-logo-img" alt="BulkSend logo" loading="eager" />
-      <div class="loader-spinner"></div>
-    </div>
-  </div>
-
-  <!-- Navbar placeholder (injected from header.html / assets/js/main.js) -->
-  <div id="navbar-placeholder"></div>
-
-  <!-- Page header / breadcrumb -->
-  <header class="page-header" style="padding:110px 0 40px; background:var(--bg-hero);">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-8">
-          <h1 class="page-title">Services</h1>
-          <p class="lead">Powerful WhatsApp tools built for business — included with BulkSend v1.1.</p>
-        </div>
-        <div class="col-md-4 text-md-end">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-md-end mb-0">
-              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Services</li>
-            </ol>
-          </nav>
-        </div>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+      <div class="loader-inner">
+        <img
+          src="assets/images/logo.png"
+          class="loader-logo-img"
+          alt="BulkSend logo"
+          loading="eager" />
+        <div class="loader-spinner"></div>
       </div>
     </div>
-  </header>
 
-  <!-- ============================================================
+    <!-- Navbar placeholder (injected from header.html / assets/js/main.js) -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page header / breadcrumb -->
+    <header
+      class="page-header"
+      style="padding: 110px 0 40px; background: var(--bg-hero)">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="page-title">Services</h1>
+            <p class="lead">
+              Powerful WhatsApp tools built for business — included with
+              BulkSend v1.1.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-md-end mb-0">
+                <li class="breadcrumb-item">
+                  <a href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Services
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================================
        SERVICES CARDS
        ============================================================ -->
-  <section style="padding:80px 0; background:var(--bg-body);">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-paper-plane me-1"></i>Core Services</span>
-        <h2 class="section-title">Powerful <span>WhatsApp Tools</span><br>Built for Business</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">All features included in your BulkSend subscription. No extra costs.</p>
+    <section style="padding: 80px 0; background: var(--bg-body)">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge"
+            ><i class="fas fa-paper-plane me-1"></i>Core Services</span
+          >
+          <h2 class="section-title">
+            Powerful <span>WhatsApp Tools</span><br />Built for Business
+          </h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">
+            All features included in your BulkSend subscription. No extra costs.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-card">
+              <div class="d-flex align-items-start gap-4">
+                <div class="service-icon flex-shrink-0">
+                  <i class="fas fa-list-ul"></i>
+                </div>
+                <div>
+                  <h3>Bulk Message to Contact List</h3>
+                  <p>
+                    Upload your contact list in CSV format and use header-based
+                    placeholders for personalized WhatsApp campaigns at scale.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check"></i> CSV contact loader with
+                      auto-sanitization
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Invalid or empty numbers
+                      skipped
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Dynamic placeholders from CSV
+                      headers
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Background campaign worker
+                      keeps UI responsive
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Auto-send trigger with
+                      progress logs
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="d-flex align-items-start gap-4">
+                <div
+                  class="service-icon flex-shrink-0"
+                  style="background: linear-gradient(135deg, #4ecdc4, #00b09b)">
+                  <i class="fas fa-address-book"></i>
+                </div>
+                <div>
+                  <h3>Message Every Contact</h3>
+                  <p>
+                    Broadcast WhatsApp messages to every single contact saved in
+                    your phone automatically. No need to manually select
+                    recipients — reach your entire network with one click.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check"></i> One-click broadcast to all
+                      saved contacts
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Active navigation via
+                      WhatsApp send endpoint
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Settle interval before
+                      dispatch
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Optimized send button
+                      injection
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Activity status updates in
+                      log screen
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="d-flex align-items-start gap-4">
+                <div
+                  class="service-icon flex-shrink-0"
+                  style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div>
+                  <h3>Message Group Members</h3>
+                  <p>
+                    Send bulk messages directly to all members of your WhatsApp
+                    groups. Select specific groups or all groups at once for
+                    maximum outreach.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check"></i> Target members from selected
+                      groups
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Use extracted group member
+                      lists
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Dynamic placeholders for
+                      personalization
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Auto-sanitization and
+                      validation checks
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Progress logging per group
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="d-flex align-items-start gap-4">
+                <div
+                  class="service-icon flex-shrink-0"
+                  style="background: linear-gradient(135deg, #fa709a, #fee140)">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                  <h3>Extract Chat Contacts</h3>
+                  <p>
+                    Automatically extract all contact numbers from your WhatsApp
+                    chat history and build a comprehensive marketing database in
+                    seconds.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check"></i> Store API hook for active
+                      chats
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> React fiber DOM fallback
+                      crawler
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> DOM text regex fallback
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> LID/JID mapping to phone
+                      numbers
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Auto-save to SQLite database
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="d-flex align-items-start gap-4">
+                <div
+                  class="service-icon flex-shrink-0"
+                  style="background: linear-gradient(135deg, #a8edea, #fed6e3)">
+                  <i class="fas fa-layer-group" style="color: #1a2332"></i>
+                </div>
+                <div>
+                  <h3>Extract Group Members</h3>
+                  <p>
+                    Pull all phone numbers from any WhatsApp group instantly.
+                    Build targeted marketing lists from competitor groups or
+                    your own communities.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check"></i> Extract participants from
+                      active groups
+                    </li>
+                    <li><i class="fas fa-check"></i> Name to phone mapping</li>
+                    <li>
+                      <i class="fas fa-check"></i> Auto-save with compound-key
+                      deduplication
+                    </li>
+                    <li><i class="fas fa-check"></i> Export to CSV or Excel</li>
+                    <li>
+                      <i class="fas fa-check"></i> Send extracted lists to Bulk
+                      Send
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card">
+              <div class="d-flex align-items-start gap-4">
+                <div
+                  class="service-icon flex-shrink-0"
+                  style="background: linear-gradient(135deg, #667eea, #764ba2)">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div>
+                  <h3>Analytics Dashboard</h3>
+                  <p>
+                    Monitor campaigns with real-time activity logs, saved data,
+                    and export-ready reports from one intuitive dashboard.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check"></i> Activity logs for send and
+                      extract tasks
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Local SQLite storage for
+                      contacts and settings
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Saved data hub with merge and
+                      deduplication
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Export custom CSV sheets
+                      anytime
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Persistent settings across
+                      restarts
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="row g-4">
-        <!-- Service 1 -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-card">
-            <div class="d-flex align-items-start gap-4">
-              <div class="service-icon flex-shrink-0"><i class="fas fa-list-ul"></i></div>
-              <div>
-                <h3>Bulk Message to Contact List</h3>
-                <p>Upload your custom contact list in CSV or text format and send personalized WhatsApp messages to all contacts simultaneously. Perfect for targeted marketing campaigns.</p>
-                <ul class="service-list">
-                  <li><i class="fas fa-check"></i> Upload CSV or TXT contact files</li>
-                  <li><i class="fas fa-check"></i> Personalize messages with names</li>
-                  <li><i class="fas fa-check"></i> Send text, images, documents &amp; links</li>
-                  <li><i class="fas fa-check"></i> Progress tracking in real-time</li>
-                  <li><i class="fas fa-check"></i> Configurable message delay</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card">
-            <div class="d-flex align-items-start gap-4">
-              <div class="service-icon flex-shrink-0" style="background:linear-gradient(135deg,#4ecdc4,#00b09b);"><i class="fas fa-address-book"></i></div>
-              <div>
-                <h3>Message Every Contact</h3>
-                <p>Broadcast WhatsApp messages to every single contact saved in your phone automatically. No need to manually select recipients — reach your entire network with one click.</p>
-                <ul class="service-list">
-                  <li><i class="fas fa-check"></i> Auto-detect all saved contacts</li>
-                  <li><i class="fas fa-check"></i> Filter by region or category</li>
-                  <li><i class="fas fa-check"></i> Skip blocked contacts</li>
-                  <li><i class="fas fa-check"></i> Scheduled sending support</li>
-                  <li><i class="fas fa-check"></i> Delivery confirmation tracking</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card">
-            <div class="d-flex align-items-start gap-4">
-              <div class="service-icon flex-shrink-0" style="background:linear-gradient(135deg,#f093fb,#f5576c);"><i class="fas fa-users"></i></div>
-              <div>
-                <h3>Message Group Members</h3>
-                <p>Send bulk messages directly to all members of your WhatsApp groups. Select specific groups or all groups at once for maximum outreach.</p>
-                <ul class="service-list">
-                  <li><i class="fas fa-check"></i> Select specific groups</li>
-                  <li><i class="fas fa-check"></i> Message all groups at once</li>
-                  <li><i class="fas fa-check"></i> Exclude group admins option</li>
-                  <li><i class="fas fa-check"></i> Group message history</li>
-                  <li><i class="fas fa-check"></i> Member count analytics</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card">
-            <div class="d-flex align-items-start gap-4">
-              <div class="service-icon flex-shrink-0" style="background:linear-gradient(135deg,#fa709a,#fee140);"><i class="fas fa-comments"></i></div>
-              <div>
-                <h3>Extract Chat Contacts</h3>
-                <p>Automatically extract all contact numbers from your WhatsApp chat history and build a comprehensive marketing database in seconds.</p>
-                <ul class="service-list">
-                  <li><i class="fas fa-check"></i> Extract from all chat history</li>
-                  <li><i class="fas fa-check"></i> Filter by date range</li>
-                  <li><i class="fas fa-check"></i> Remove duplicates automatically</li>
-                  <li><i class="fas fa-check"></i> Export to CSV/Excel</li>
-                  <li><i class="fas fa-check"></i> Bulk extraction in seconds</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-card">
-            <div class="d-flex align-items-start gap-4">
-              <div class="service-icon flex-shrink-0" style="background:linear-gradient(135deg,#a8edea,#fed6e3);"><i class="fas fa-layer-group" style="color:#1a2332;"></i></div>
-              <div>
-                <h3>Extract Group Members</h3>
-                <p>Pull all phone numbers from any WhatsApp group instantly. Build targeted marketing lists from competitor groups or your own communities.</p>
-                <ul class="service-list">
-                  <li><i class="fas fa-check"></i> Extract from any group</li>
-                  <li><i class="fas fa-check"></i> Multiple group extraction</li>
-                  <li><i class="fas fa-check"></i> Include/exclude admins</li>
-                  <li><i class="fas fa-check"></i> Export ready database</li>
-                  <li><i class="fas fa-check"></i> Real-time member count</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-card">
-            <div class="d-flex align-items-start gap-4">
-              <div class="service-icon flex-shrink-0" style="background:linear-gradient(135deg,#667eea,#764ba2);"><i class="fas fa-chart-bar"></i></div>
-              <div>
-                <h3>Analytics Dashboard</h3>
-                <p>Monitor all your campaign performance in real-time. Track messages sent, delivery rates, contact extraction results, and more from one intuitive dashboard.</p>
-                <ul class="service-list">
-                  <li><i class="fas fa-check"></i> Real-time campaign metrics</li>
-                  <li><i class="fas fa-check"></i> Success/failure breakdown</li>
-                  <li><i class="fas fa-check"></i> Activity timeline logs</li>
-                  <li><i class="fas fa-check"></i> Export reports to PDF</li>
-                  <li><i class="fas fa-check"></i> Performance comparison</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        ADDITIONAL FEATURES
        ============================================================ -->
-  <section style="padding:80px 0; background:var(--bg-section);">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-plus-circle me-1"></i>More Features</span>
-        <h2 class="section-title">Advanced <span>Settings &amp; Controls</span></h2>
-        <div class="divider"></div>
+    <section style="padding: 80px 0; background: var(--bg-section)">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge"
+            ><i class="fas fa-plus-circle me-1"></i>More Features</span
+          >
+          <h2 class="section-title">
+            Advanced <span>Settings &amp; Controls</span>
+          </h2>
+          <div class="divider"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-card text-center">
+              <div class="feature-icon mx-auto">
+                <i class="fas fa-sliders-h"></i>
+              </div>
+              <h4>Smart Delay Settings</h4>
+              <p>
+                Set a base delay (1 to 300 seconds) and jitter (5% to 95%) to
+                mimic human timing and reduce risk.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card text-center">
+              <div class="feature-icon mx-auto">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+              <h4>Batch Pause &amp; Cooldown</h4>
+              <p>
+                Pause after 1 to 1000 messages and cool down for 1 to 300
+                minutes to avoid flags and bans.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card text-center">
+              <div class="feature-icon mx-auto">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <h4>Daily Send Cap</h4>
+              <p>
+                Set a 1 to 10000 daily send cap so campaigns stop automatically
+                within a 24 hour window.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card text-center">
+              <div class="feature-icon mx-auto">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <h4>Custom User Agent</h4>
+              <p>
+                Use a custom HTTP user agent string to match OS footprints and
+                reduce fingerprinting.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card text-center">
+              <div class="feature-icon mx-auto">
+                <i class="fas fa-database"></i>
+              </div>
+              <h4>Local SQLite Database</h4>
+              <p>
+                Store contacts, logs, and settings locally with compound-key
+                deduplication for clean data.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-card text-center">
+              <div class="feature-icon mx-auto">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h4>Saved Data Hub</h4>
+              <p>
+                Merge sources, deduplicate contacts, and export custom CSV
+                sheets anytime.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="feature-card text-center">
-            <div class="feature-icon mx-auto"><i class="fas fa-sliders-h"></i></div>
-            <h4>Smart Delay Settings</h4>
-            <p>Configure message intervals to mimic human behavior and avoid WhatsApp restrictions. Set custom delays between each message for maximum safety.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card text-center">
-            <div class="feature-icon mx-auto"><i class="fas fa-cog"></i></div>
-            <h4>API Settings</h4>
-            <p>Connect BulkSend to your existing CRM or business tools via API. Automate your marketing workflow with seamless integrations.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card text-center">
-            <div class="feature-icon mx-auto"><i class="fas fa-comment-dots"></i></div>
-            <h4>Message Templates</h4>
-            <p>Save and reuse your best-performing message templates. Support for text, emojis, images, documents, videos, and clickable links.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card text-center">
-            <div class="feature-icon mx-auto"><i class="fas fa-clock"></i></div>
-            <h4>Scheduled Sending</h4>
-            <p>Schedule your WhatsApp campaigns to send at the perfect time — even while you sleep. Set it and forget it.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="feature-card text-center">
-            <div class="feature-icon mx-auto"><i class="fas fa-filter"></i></div>
-            <h4>Contact Filtering</h4>
-            <p>Filter your extracted contacts by country code, area, or custom tags to create hyper-targeted marketing segments.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="feature-card text-center">
-            <div class="feature-icon mx-auto"><i class="fas fa-book"></i></div>
-            <h4>User Guide &amp; Help</h4>
-            <p>Comprehensive built-in user guide with step-by-step tutorials. Plus dedicated WhatsApp support from JAAN Network team.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        PROCESS SECTION
        ============================================================ -->
-  <section style="padding:80px 0; background:var(--bg-body);">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-route me-1"></i>How It Works</span>
-        <h2 class="section-title">Get Started in <span>4 Simple Steps</span></h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Set up BulkSend in minutes and start reaching your customers immediately.</p>
-      </div>
+    <section style="padding: 80px 0; background: var(--bg-body)">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge"
+            ><i class="fas fa-route me-1"></i>How It Works</span
+          >
+          <h2 class="section-title">
+            Get Started in <span>4 Simple Steps</span>
+          </h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">
+            Set up BulkSend in minutes and start reaching your customers
+            immediately.
+          </p>
+        </div>
 
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-          <div class="process-step">
-            <div class="process-step-number">01</div>
-            <div class="feature-card text-center mt-3">
-              <div class="feature-icon mx-auto" style="font-size:2rem;"><i class="fas fa-download"></i></div>
-              <h5>Purchase &amp; Download</h5>
-              <p>Choose your plan, make payment, and receive the BulkSend installer instantly via WhatsApp from our team.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="process-step">
+              <div class="process-step-number">01</div>
+              <div class="feature-card text-center mt-3">
+                <div class="feature-icon mx-auto" style="font-size: 2rem">
+                  <i class="fas fa-download"></i>
+                </div>
+                <h5>Purchase &amp; Download</h5>
+                <p>
+                  Choose your plan, make payment, and receive the BulkSend
+                  installer instantly via WhatsApp from our team.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="process-step">
-            <div class="process-step-number">02</div>
-            <div class="feature-card text-center mt-3">
-              <div class="feature-icon mx-auto" style="font-size:2rem;"><i class="fab fa-windows"></i></div>
-              <h5>Install on Windows</h5>
-              <p>Run the installer on your Windows PC. Simple one-click installation. Connect your WhatsApp account via QR code.</p>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="150">
+            <div class="process-step">
+              <div class="process-step-number">02</div>
+              <div class="feature-card text-center mt-3">
+                <div class="feature-icon mx-auto" style="font-size: 2rem">
+                  <i class="fab fa-windows"></i>
+                </div>
+                <h5>Install on Windows</h5>
+                <p>
+                  Run the installer on your Windows PC. Simple one-click
+                  installation. Connect your WhatsApp account via QR code.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="process-step">
-            <div class="process-step-number">03</div>
-            <div class="feature-card text-center mt-3">
-              <div class="feature-icon mx-auto" style="font-size:2rem;"><i class="fas fa-upload"></i></div>
-              <h5>Upload Contacts</h5>
-              <p>Import your contact list or use the extraction tool to automatically build your database from WhatsApp.</p>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="process-step">
+              <div class="process-step-number">03</div>
+              <div class="feature-card text-center mt-3">
+                <div class="feature-icon mx-auto" style="font-size: 2rem">
+                  <i class="fas fa-upload"></i>
+                </div>
+                <h5>Upload Contacts</h5>
+                <p>
+                  Import your contact list or use the extraction tool to
+                  automatically build your database from WhatsApp.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
-          <div class="process-step">
-            <div class="process-step-number">04</div>
-            <div class="feature-card text-center mt-3">
-              <div class="feature-icon mx-auto" style="font-size:2rem;"><i class="fas fa-rocket"></i></div>
-              <h5>Launch Campaign</h5>
-              <p>Write your message, configure delays, and hit send. Watch your campaign reach thousands of customers in minutes.</p>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="450">
+            <div class="process-step">
+              <div class="process-step-number">04</div>
+              <div class="feature-card text-center mt-3">
+                <div class="feature-icon mx-auto" style="font-size: 2rem">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h5>Launch Campaign</h5>
+                <p>
+                  Write your message, configure delays, and hit send. Watch your
+                  campaign reach thousands of customers in minutes.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        FAQ SECTION
        ============================================================ -->
-  <section class="faq-section" style="padding:80px 0;">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-question-circle me-1"></i>FAQ</span>
-        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Everything you need to know about BulkSend v1.1.</p>
-      </div>
+    <section class="faq-section" style="padding: 80px 0">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge"
+            ><i class="fas fa-question-circle me-1"></i>FAQ</span
+          >
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">
+            Everything you need to know about BulkSend v1.1.
+          </p>
+        </div>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-9" data-aos="fade-up">
-          <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  What is BulkSend v1.1?
-                </button>
-              </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  BulkSend v1.1 is a Windows desktop application that lets you send bulk WhatsApp messages to thousands of contacts, extract contact numbers from chats and groups, and manage your WhatsApp marketing campaigns from one powerful dashboard. It's developed by JAAN Network Pvt Ltd, Colombo, Sri Lanka.
+        <div class="row justify-content-center">
+          <div class="col-lg-9" data-aos="fade-up">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    What is BulkSend v1.1?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    BulkSend v1.1 is a Windows desktop application that lets you
+                    send bulk WhatsApp messages to thousands of contacts,
+                    extract contact numbers from chats and groups, and manage
+                    your WhatsApp marketing campaigns from one powerful
+                    dashboard. It's developed by JAAN Network Pvt Ltd, Colombo,
+                    Sri Lanka.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  Is BulkSend safe to use?
-                </button>
-              </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Yes! BulkSend includes built-in smart delay settings that mimic human messaging patterns. This prevents WhatsApp from flagging your account. We recommend following our best practices guide and using the recommended delay settings for maximum account safety.
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    Is BulkSend safe to use?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes! BulkSend includes built-in smart delay settings that
+                    mimic human messaging patterns. This prevents WhatsApp from
+                    flagging your account. We recommend following our best
+                    practices guide and using the recommended delay settings for
+                    maximum account safety.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  What operating system is required?
-                </button>
-              </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  BulkSend v1.1 is currently available for Windows 10 and Windows 11. Mac and Linux versions are planned for future releases. You need WhatsApp installed and logged in on your Windows PC or via WhatsApp Web.
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    What operating system is required?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    BulkSend v1.1 is currently available for Windows 10 and
+                    Windows 11. Mac and Linux versions are planned for future
+                    releases. You need WhatsApp installed and logged in on your
+                    Windows PC or via WhatsApp Web.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  How many messages can I send per day?
-                </button>
-              </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  With the Professional plan (LKR 5,900/month), you can send unlimited messages. We recommend sending 500-1000 messages per day with proper delays to maintain account health. Our team provides guidance on optimal sending strategies.
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    How many messages can I send per day?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    With the Professional plan (LKR 5,900/month), you can send
+                    unlimited messages. We recommend sending 500-1000 messages
+                    per day with proper delays to maintain account health. Our
+                    team provides guidance on optimal sending strategies.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  How do I receive the software after purchase?
-                </button>
-              </h2>
-              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  After purchase, our team will contact you via WhatsApp (076 593 3255) to deliver the software installer, license key, and setup instructions. We also provide free remote assistance for installation if needed.
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    How do I receive the software after purchase?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    After purchase, our team will contact you via WhatsApp (076
+                    593 3255) to deliver the software installer, license key,
+                    and setup instructions. We also provide free remote
+                    assistance for installation if needed.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  Is there a free trial available?
-                </button>
-              </h2>
-              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  We offer a free demo session where our team will show you all features live. Contact us on WhatsApp at 076 593 3255 to schedule your free demo. We also offer a satisfaction guarantee for all purchases.
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq6">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    Is there a free trial available?
+                  </button>
+                </h2>
+                <div
+                  id="faq6"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    We offer a free demo session where our team will show you
+                    all features live. Contact us on WhatsApp at 076 593 3255 to
+                    schedule your free demo. We also offer a satisfaction
+                    guarantee for all purchases.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-                  <i class="fas fa-question-circle me-3" style="color:var(--primary);"></i>
-                  What types of messages can I send?
-                </button>
-              </h2>
-              <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  BulkSend supports sending: Text messages, Images (JPG, PNG, GIF), Documents (PDF, Word, Excel), Videos, Audio files, Contact cards, Location pins, and clickable links. You can also personalize messages with recipient names.
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq7">
+                    <i
+                      class="fas fa-question-circle me-3"
+                      style="color: var(--primary)"></i>
+                    What types of messages can I send?
+                  </button>
+                </h2>
+                <div
+                  id="faq7"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    BulkSend supports sending: Text messages, Images (JPG, PNG,
+                    GIF), Documents (PDF, Word, Excel), Videos, Audio files,
+                    Contact cards, Location pins, and clickable links. You can
+                    also personalize messages with recipient names.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section style="padding:60px 0; background:var(--bg-section);">
-    <div class="container">
-      <div class="cta-wrapper" data-aos="zoom-in">
-        <h2 class="section-title">Ready to <span>Start Sending?</span></h2>
-        <p class="section-subtitle mb-4">Get BulkSend v1.1 today and reach thousands of WhatsApp contacts in minutes.</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="pricing.html" class="btn btn-primary-custom btn-lg">
-            <i class="fas fa-tag me-2"></i>View Pricing
-          </a>
-          <a href="https://wa.me/94765933255" class="btn btn-outline-custom btn-lg" target="_blank">
-            <i class="fab fa-whatsapp me-2"></i>Chat with Us
-          </a>
+    <!-- CTA -->
+    <section style="padding: 60px 0; background: var(--bg-section)">
+      <div class="container">
+        <div class="cta-wrapper" data-aos="zoom-in">
+          <h2 class="section-title">Ready to <span>Start Sending?</span></h2>
+          <p class="section-subtitle mb-4">
+            Get BulkSend v1.1 today and reach thousands of WhatsApp contacts in
+            minutes.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="pricing.html" class="btn btn-primary-custom btn-lg">
+              <i class="fas fa-tag me-2"></i>View Pricing
+            </a>
+            <a
+              href="https://wa.me/94765933255"
+              class="btn btn-outline-custom btn-lg"
+              target="_blank">
+              <i class="fab fa-whatsapp me-2"></i>Chat with Us
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <!-- Footer placeholder (injected from footer.html / assets/js/main.js) -->
-  <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    <!-- Footer placeholder (injected from footer.html / assets/js/main.js) -->
+    <div id="footer-placeholder"></div>
 
-  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <button id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
